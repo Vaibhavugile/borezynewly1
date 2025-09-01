@@ -1,0 +1,385 @@
+
+.booking-details-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  padding: 40px;
+  max-width: 1000px; /* Reduced width for smaller size */
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  position: left; /* Retaining relative position for activity log */
+  transition: box-shadow 0.3s ease;
+  text-align: center; /* Center the text inside */
+}
+
+.booking-details-container:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.booking-details-container h2,
+.booking-details-container h3 {
+  color: #444;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.booking-details-container h2 {
+  font-size: 1.17rem;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.booking-details-container .info-row {
+  display: flex;
+  justify-content: center; /* Centering the content horizontally */
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+.booking-details-container .info-row p {
+  flex: 1;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  margin-left: 80px;
+  
+}
+
+.booking-details-container strong {
+  color: #555;
+  font-weight: 600;
+}
+
+.personal-info,
+.product-details-container,
+.payment-info,
+.client-type-container {
+  margin-bottom: 40px;
+  padding: 2px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background-color: #fafafa;
+  text-align: center;
+  width: 100%;
+}
+
+.product-details-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-details-table th,
+.product-details-table td {
+  padding: 5px;
+  text-align: center; /* Center table content */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.product-details-table th {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.product-details-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.client-type-container h5 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #444;
+  font-weight: 700;
+}
+
+label {
+  font-weight: 500;
+}
+
+.booking-details-container select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fff;
+  width: 400px; /* Reduced width for the select box */
+  transition: border-color 0.3s ease;
+  text-align: left;
+}
+
+.booking-details-container select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+ .booking-details-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.17rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.booking-details-container button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.booking-details-container button:focus {
+  outline: none;
+  background-color: #004080;
+}
+
+/* Activity Log Section - Fixed to the top right, separate from the main content */
+.activity-log-container {
+  margin: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.activity-log-container h3 {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.activity-log {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: slideIn 0.6s ease forwards;
+}
+
+.activity-log ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.activity-log ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+.activity-log ul li:last-child {
+  border-bottom: none;
+}
+
+.activity-log ul li p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.activity-log ul li:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.activity-log ul li p::before {
+  content: '🔹';
+  margin-right: 5px;
+  color: #4caf50;
+}
+
+.activity-log ul li p span {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+/* Smooth scroll for new logs */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Scrollbar Styling */
+.activity-log-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.activity-log-container::-webkit-scrollbar-thumb {
+  background: #4caf50;
+  border-radius: 4px;
+}
+
+.activity-log-container::-webkit-scrollbar-thumb:hover {
+  background: #388e3c;
+}
+
+.activity-log-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+.log-entry {
+  white-space: pre-wrap; /* Preserve line breaks and wrap text */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font for clarity */
+  line-height: 1.5; /* Spacing between lines */
+  margin: 5px 0; /* Spacing between logs */
+  background-color: #f5f5f5; /* Subtle background for better visibility */
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  color: #333; /* Text color */
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.17rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button1 {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.17rem;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.vaisak{
+  margin-left: -1000px;
+}
+@media print {
+  .activity-log-container, /* Hide activity log */
+  .vaisak,
+  .button,
+  .edit-button,
+  .payment-info button,
+  .client-type-container button,
+  .main-content button,
+  footer {                 /* Hide footer if present */
+    display: none;
+  }
+  header {
+    display: none;
+  }
+
+  .print-button {
+    display: none; 
+    margin-right: 5px;/* Hide the print button */
+  }
+}
+
+@media print {
+  .booking-details-container {
+    margin: 0;
+    padding: 0;
+    color: black;
+    
+    
+  }
+
+  .activity-log-container,
+  .product-details-container {
+    page-break-after: always; /* Ensures each section starts on a new page */
+    padding: 5px;
+  }
+
+  .activity-log-container:last-of-type,
+  .personal-info:last-of-type,
+  .product-details-container:last-of-type,
+  .payment-info:last-of-type {
+    page-break-after: auto; /* Prevents unnecessary blank pages */
+  }
+
+  /* Hide non-printable elements */
+  .vaisak img,
+  .print-button {
+    display: none;
+    margin-right: "5px";
+  }
+}
+
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .product-details-container {
+    page-break-inside: avoid;
+    width: 100%;
+    overflow: visible !important;
+  }
+
+  .product-details-table {
+    width: 78%;
+    border-collapse: collapse;
+    page-break-inside: auto;
+  }
+
+  .product-details-table th,
+  .product-details-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+    page-break-inside: avoid;
+  }
+
+  .product-details-table tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  img {
+    max-width: 100px;
+    height: auto;
+    page-break-inside: avoid;
+  }
+
+  /* Hide non-printable elements if needed */
+  .no-print {
+    display: none;
+  }
+}
